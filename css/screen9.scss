@@ -1,0 +1,175 @@
+.screen9 {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+
+    h1 {
+        color: #1c2237;
+        text-align: center;
+
+        &:before {
+            left: 50%;
+            margin-left: -20px;
+        }
+    }
+
+    h3 {
+        font-size: 19px;
+        color: #1c2237;
+        text-align: center;
+        font-weight: 400;
+        padding-top: 55px;
+        float: left;
+        width: 100%;
+    }
+
+    .centered {
+        padding-top: 60px;
+        padding-bottom: 90px;
+        position: relative;
+
+        > p {
+            float: left;
+            width: 100%;
+            color: #9eaacc;
+            font-size: 17px;
+            line-height: 25px;
+            padding-top: 25px;
+            text-align: center;
+        }
+
+    }
+
+    .boxes {
+        float: left;
+        margin: 0 -24px;
+
+        .item {
+            float: left;
+            text-align: center;
+            width: 33.33%;
+            margin-top: 48px;
+            padding: 0 24px;
+            box-sizing: border-box;
+            
+
+            &:nth-child(1),
+            &:nth-child(3n + 1) {
+                .text {
+                    background: url('../img/quote1.gif') no-repeat 40px bottom;
+                }
+            }
+
+            &:nth-child(2),
+            &:nth-child(3n + 2) {
+                .text {
+                    background: url('../img/quote2.gif') no-repeat right top;
+                }
+            }
+
+            &:nth-child(3),
+            &:nth-child(3n + 3) {
+                .text {
+                    background: url('../img/quote3.gif') no-repeat right bottom;
+                }
+            }
+
+            h3 {
+                font-size: 16px;
+                padding-top: 75px;
+            }
+
+            .text {
+                float: left;
+                width: 100%;
+                height: 285px;
+                box-sizing: border-box;
+                padding: 0 40px;
+                @include box-shadow(0px 19px 54px 10px rgba(158, 170, 204, 0.18));
+
+                > p {
+                    float: left;
+                    width: 100%;
+                    color: #9eaacc;
+                    font-size: 13px;
+                    line-height: 25px;
+                    padding-top: 20px;
+                    text-align: center;
+                }
+            }
+
+            .person {
+                height: 130px;
+                float: left;
+                width: 100%;
+                @include box-shadow(0px 19px 54px 10px rgba(158, 170, 204, 0.18));
+
+                .picture {
+                    width: 76px;
+                    height: 76px;
+                    border-radius: 38px;
+                    overflow: hidden;
+                    margin: 26px 0 0 28px;
+                    float: left;
+
+                    img {
+                        float: left;
+                    }
+                }
+
+                .info {
+                    padding: 0 40px 0 136px;
+                    text-align: left;
+                    color: #9eaacc;
+                    font-size: 13px;
+
+                    h3 {
+                        padding-top: 30px;
+                        text-align: left;
+                        padding-bottom: 10px;
+                    }
+
+                    p {
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+    .screen9 {
+        .centered {
+            .boxes {
+                .item {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:680px) {
+    .screen9 {
+        .centered {
+            h3 {
+                padding-top: 24px;
+            }
+            
+            > p {
+                font-size: 14px;
+                line-height: 23px;
+            }
+
+            .boxes {
+                .item {
+                    width: 100%;
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+}
+

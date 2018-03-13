@@ -1,0 +1,110 @@
+footer {
+    position: relative; 
+    height: 369px; 
+    font-size: 14px;
+    @include gradient-top(#232a45, #20253f);
+    text-align: center;
+    border-top: 1px solid #414967;
+    @include box-shadow(0px -1px 0 0 #1b2038);
+
+    .centered {
+        max-width: 700px;
+        margin: 0 auto;
+        padding-top: 75px;
+
+        ul {
+            float: left;
+            list-style: none;
+            width: 100%;
+            text-align: center;
+            margin-top: 45px;
+
+            &.icons {
+                a {
+                    opacity: .6;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            li {
+                display: inline-block;
+                font-size: 14px;
+                margin: 0 12px;
+                line-height: 23px;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        h6 {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 300;
+            margin-top: 20px;
+            float: left;
+            width: 100%;
+        }
+    }
+}
+
+
+body {
+    background: #232a45;
+}
+
+@media screen and (max-width: 655px) {
+    footer {
+        .centered {
+            ul {
+                li {
+                    font-size: 11px;
+                }
+            }
+
+            h6 {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    footer {
+        .centered {
+            ul {
+                &.icons {
+                    li {
+                        margin-left: 4px;
+                        margin-right: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    footer {
+        .centered {
+            ul {
+                &.icons {
+                    @include zoom(.6);
+                    li {
+                        margin-left: 12px;
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

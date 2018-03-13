@@ -1,0 +1,102 @@
+.screen12 {
+    position: relative;
+    overflow: hidden;
+    @include gradient-top(#2b3451, #232a45);
+    
+    &:before {
+        width: 100%;
+        height: 100%;
+        background: url('../img/screen12.png') no-repeat 0 0;
+        content: "";
+        position: absolute;
+    }
+
+    h1 {
+        color: #fff;
+        text-align: center;
+        padding-bottom: 78px;
+
+        &:before {
+            left: 50%;
+            margin-left: -20px;
+            @include gradient-top(#ad74ff, #8c70f6);
+        }
+    }
+
+    .chart {
+        text-align: center;
+
+        .img {
+            height: 550px;
+
+            img {
+                float: left;
+            }
+        }
+
+        &.chart1 {
+            float: left;
+            width: 537px;
+        }
+    
+        &.chart2 {
+            float: right;
+            width: 500px;
+        }
+
+        > p {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+    }
+    
+
+    .centered {
+        padding-top: 75px;
+        padding-bottom: 75px;
+        position: relative;
+    }
+
+}
+
+@media screen and (max-width: 1150px) {
+    .screen12 {
+        .chart {
+            width: 100% !important;
+
+            .img img {
+                float: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .screen12 {
+        .centered {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .chart {
+            width: 100% !important;
+
+            > p {
+                font-size: 13px;
+            }
+
+            .img {
+                height: auto;
+                padding-bottom: 20px;
+
+                img {
+                    float: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+

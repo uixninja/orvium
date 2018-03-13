@@ -1,0 +1,105 @@
+.screen4 {
+    position: relative;
+    overflow: hidden;
+    background: #fff url('../img/map.jpg') no-repeat 35px 50%;
+    
+    .centered {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+
+    .text {
+        float: right;
+        width: 490px;
+
+        h1 {
+            color: #1c2236;
+
+            &:before {
+                @include gradient-top(#69e9b4, #5bd4d3);
+            }
+        }
+
+        p {
+            float: left;
+            width: 100%;
+            color: #9eaacc;
+            font-size: 17px;
+            line-height: 32px;
+            padding-top: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .screen4 {
+        background-size: 47%;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .screen4 {
+        background-size: auto;
+        background: #fff;
+
+        .centered {
+            padding-top: 60px;
+            padding-bottom: 65px;
+        }
+
+        .text {
+            width: 100%;
+            text-align: center;
+            position: relative;
+            padding-bottom: 310px;
+
+            h1, p {
+                position: relative;
+                z-index: 2;
+            }
+
+            h1 {
+                &:before {
+                    left: 50%;
+                    margin-left: -20px;
+                }
+            }
+
+            &:after {
+                width: 500px;
+                height: 287px;
+                content: "";
+                margin: 0 auto;
+                background: url('../img/map.jpg') no-repeat 0 0;
+                background-size: 100% 100%;
+                position: absolute;
+                left: 50%;
+                margin-left: -250px;
+                bottom: 0px;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 555px) {
+    .screen4 {
+        .text {
+            padding-bottom: 220px;
+
+            &:after {
+                width: 330px;
+                height: 189px;
+                margin-left: -165px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1900px) {
+    .screen4 {
+        background-position: 10% 50%;
+    }
+}

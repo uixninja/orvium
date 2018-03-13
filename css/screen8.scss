@@ -1,0 +1,350 @@
+.screen8 {
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+        color: #fff;
+        text-align: center;
+
+        &:before {
+            left: 50%;
+            margin-left: -20px;
+        }
+    } 
+
+    .roadmap {
+        width: 1148px;
+        height: 346px;
+        background: url('../img/roadmap.png') no-repeat 50% 0;
+        float: left;
+        margin-top: 125px;
+        position: relative;
+
+        .tooltip {
+            font-size: 16px;
+            color: #9eaacc;
+
+            .head {
+                color: #1c2335;
+                font-size: 16px;
+            }
+
+            .date {
+                line-height: 33px;
+            }
+
+            p {
+                padding-top: 5px;
+            }
+        }
+
+        .point {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+
+            .circle {
+                width: 100%;
+                height: 100%;
+            }
+
+            .point_text {
+                position: absolute;
+                font-weight: 500;
+                font-size: 15px;
+                width: 200px;
+                top: -85px;
+                left: -13px;
+
+                &.point_bottom {
+                    top: 85px;
+                }
+                
+                div {
+                    float: left;
+                    width: 100%;
+                    color: #fff;
+                }
+    
+                p {
+                    float: left;
+                    width: 100%;
+                    color: #9eaacc;
+                    line-height: 120%;
+                    padding-top: 10px;
+                }       
+            }
+
+            &.point1 {
+                left: 168px;
+                top: 263px;
+            }
+
+            &.point2 {
+                left: 282px;
+                top: 72px;
+            }
+
+            &.point3 {
+                left: 475px;
+                top: 156px;
+            }
+
+            &.point4 {
+                left: 652px;
+                top: 128px;
+            }
+
+            &.point5 {
+                left: 837px;
+                top: 263px;
+            }
+
+            &.point6 {
+                left: 1026px;
+                top: 53px;
+            }
+        }
+
+        
+    }
+    
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #162459 url('../img/screen8.jpg') no-repeat 50% 0;
+        background-size: 100%;
+        z-index: 1;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 960px;
+        height: 542px;
+        background: url('../img/screen8_ornament.png') no-repeat 50% 0;
+        background-size: 100%;
+        z-index: 2;
+    }
+
+    .centered {
+        padding-top: 70px;
+        padding-bottom: 145px;
+        position: relative;
+        z-index: 3;
+
+        > p {
+            float: left;
+            width: 100%;
+            color: #9eaacc;
+            font-size: 17px;
+            line-height: 32px;
+            padding-top: 25px;
+            text-align: center;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+    .screen8 {
+
+        .centered {
+            h1, > p {
+                float: none;
+            }
+
+        }
+
+        .roadmap {
+            float: none;
+            width: 806px;
+            height: 242px;
+            margin: 125px auto 0 auto;
+            background-size: auto 100%;
+
+
+            .point {
+                &.point1 {
+                    left: 116px;
+                    top: 180px;
+                }
+
+                &.point2 {
+                    left: 194px;
+                    top: 47px;
+                }
+
+                &.point3 {
+                    left: 331px;
+                    top: 106px;
+                }
+
+                &.point4 {
+                    left: 454px;
+                    top: 86px;
+                }
+
+                &.point5 {
+                    left: 582px;
+                    top: 180px;
+                }
+
+                &.point6 {
+                    left: 715px;
+                    top: 33px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .screen8 {
+
+        .centered {
+            > p {
+                font-size: 15px;
+                line-height: 28px;
+            }
+        }
+
+        .roadmap {
+            float: none;
+            width: 500px;
+            height: 151px;
+            margin: 165px auto 0 auto;
+            background-size: auto 100%;
+
+            .tooltip {
+                font-size: 13px;
+
+                .tooltip-inner {
+                    padding: 18px;
+                }
+            }
+
+
+            .point {
+                .point_text {
+                    font-size: 13px;
+                    top: -50px;
+
+                    &.point_bottom {
+                        top: 50px;
+                    }
+                }
+
+                &.point1 {
+                    left: 65px;
+                    top: 107px;
+                }
+
+                &.point2 {
+                    left: 113px;
+                    top: 25px;
+                }
+
+                &.point3 {
+                    left: 197px;
+                    top: 61px;
+                }
+
+                &.point4 {
+                    left: 275px;
+                    top: 49px;
+                }
+
+                &.point5 {
+                    left: 357px;
+                    top: 105px;
+                }
+
+                &.point6 {
+                    left: 439px;
+                    top: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .screen8 {
+
+        .centered {
+            > p {
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+
+        .roadmap {
+            float: none;
+            width: 330px;
+            height: 99px;
+            margin: 150px auto 0 auto;
+
+            .tooltip {
+                font-size: 12px;
+
+                .tooltip-inner {
+                    padding: 15px;
+                }
+            }
+
+
+            .point {
+                .point_text {
+                    font-size: 10px;
+                    top: -50px;
+
+                    p {
+                        padding-top: 3px;
+                    }
+
+                    &.point_bottom {
+                        top: 50px;
+                    }
+                }
+
+                &.point1 {
+                    left: 39px;
+                    top: 67px;
+                }
+
+                &.point2 {
+                    left: 72px;
+                    top: 11px;
+                }
+
+                &.point3 {
+                    left: 126px;
+                    top: 36px;
+                }
+
+                &.point4 {
+                    left: 176px;
+                    top: 28px;
+                }
+
+                &.point5 {
+                    left: 231px;
+                    top: 66px;
+                }
+
+                &.point6 {
+                    left: 284px;
+                    top: 6px;
+                }
+            }
+        }
+    }
+}

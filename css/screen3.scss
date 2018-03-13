@@ -1,0 +1,104 @@
+.screen3 {
+    position: relative;
+    overflow: hidden;
+    background: url('../img/screen3.jpg') no-repeat 50% 0;
+    
+    .centered {
+        padding-top: 160px;
+        padding-bottom: 170px;
+    }
+
+    .image {
+        width: 453px;
+        height: 390px;
+        background: url('../img/screen3_pict.png') no-repeat 50% 50%;
+        background-size: 100% 100%;
+        float: right;
+
+        img {
+            float: left;
+        }
+    }
+
+    .text {
+        float: left;
+        width: 510px;
+
+        h1 {
+            color: #dee3ed;
+
+            &:before {
+                @include gradient-top(#f9c65d, #f5aa6c);
+            }
+        }
+
+        p {
+            float: left;
+            width: 100%;
+            color: #9eaacc;
+            font-size: 17px;
+            line-height: 32px;
+            padding-top: 40px;
+        }
+    }
+        
+
+}
+
+@media screen and (max-width: 1050px) {
+    .screen3 {
+        .image {
+            width: 370px;
+            height: 319px;
+        }
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .screen3 {
+        .centered {
+            padding-top: 55px;
+            padding-bottom: 55px;
+        }
+
+        .image {
+            width: 400px;
+            height: 344px;
+            float: none;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .text {
+            width: 100%;
+            padding-bottom: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .screen3 {
+        .image {
+            width: 350px;
+            height: 301px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .screen3 {
+        .image {
+            width: 310px;
+            height: 267px;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .screen3 {
+        background-size: 100%;
+    }
+}

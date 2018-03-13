@@ -1,0 +1,202 @@
+.screen11 {
+    position: relative;
+    overflow: hidden;
+    background: #fff url('../img/screen11_left.gif') no-repeat 0 0;
+
+    &:before {
+        width: 100%;
+        height: 100%;
+        background: url('../img/screen11.jpg') no-repeat right 0;
+        content: "";
+        position: absolute;
+    }
+
+    h1 {
+        color: #1c2237;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 70px;
+
+        &:before {
+            left: 50%;
+            margin-left: -20px;
+            @include gradient-top(#87a5f8, #6990f6);
+        }
+    }
+
+    .centered {
+        padding-top: 120px;
+        padding-bottom: 140px;
+        position: relative;
+    }
+
+    .slider {
+        list-style: none;
+        margin: 0 -29px;
+
+        li {
+            width: 299px;
+            height: 334px;
+            float: left;
+            box-sizing: border-box;
+            padding: 19px 29px 14px 29px;
+
+            .box {
+                width: 100%;
+                height: 100%;
+                border-radius: 13px;
+                background: #fff;
+                box-sizing: border-box;
+                padding: 50px 30px 0 35px;
+                @include box-shadow(0px 19px 70px 0px rgba(158, 170, 204, 0.28));
+                position: relative;
+
+                h3 {
+                    color: #616d8a;
+                    font-size: 16px;
+                    font-weight: 400;
+                    float: left;
+                    width: 100%;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .percent {
+                    font-size: 32px;
+                    line-height: 70px;
+                    color: #9facc9;
+                    font-weight: 300;
+                }
+
+                .date {
+                    color: #9facc9;
+                    font-size: 16px;
+                    padding-top: 23px;
+                    line-height: 100%;
+                }
+
+                .start {
+                    color: #616d8a;
+                    font-size: 13px;
+                    padding-top: 5px;
+                    line-height: 100%;
+                }
+
+                .shadow_percent {
+                    position: absolute;
+                    right: 0;
+                    color: #f3f5f8;
+                    font-size: 72px;
+                    font-weight: bold;
+                    line-height: 100px;
+                    top: 0;
+                    z-index: 0;
+                }
+
+                .circle {
+                    position: absolute;
+                    width: 55px;
+                    height: 55px;
+                    bottom: -27px;
+                    left: 50%;
+                    margin-left: -27px;
+                    
+                    &.gray_tick {
+                        background: url('../img/gray_tick.png') no-repeat 0 0;
+                    }
+
+                    &.blue_plus {
+                        background: url('../img/blue_plus.png') no-repeat 0 0;
+                    }
+
+                    &.gray_plus {
+                        background: url('../img/gray_plus.png') no-repeat 0 0;
+                    }
+                }
+
+                &.unactive {
+                    h3 {
+                        color: #9facc9;
+                    }
+
+                    .date {
+                        color: #dee3ed;
+                    }
+                    
+                    .start {
+                        color: #9facc9;
+                    }
+                }
+            }
+
+            &.premium {
+                padding: 0px 14px;
+
+                .box {
+                    @include gradient-top(#87a5f9, #4a7cf4);
+
+                    .shadow_percent {
+                        color: rgba(255, 255, 255, .15);
+                        font-size: 100px;
+                        line-height: 140px;
+                    }
+
+                    h3 {
+                        color: #dee3ed;
+                        font-size: 18px;
+                        padding-top: 18px;
+
+                    }
+
+                    .percent,
+                    .date {
+                        color: #fff;
+                        font-size: 18px;
+                    }
+
+                    .percent {
+                        font-size: 40px;
+                    }
+
+                    .start {
+                        color: #dee3ed;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1250px) {
+    .screen11 {
+        .centered {
+            h1 {
+                padding-bottom: 0;
+            }
+            .slider {
+                li {
+                    width: 50%;
+                    margin-top: 45px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .screen11 {
+        .centered {
+            padding-top: 45px;
+            padding-bottom: 65px;
+
+            .slider {
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
